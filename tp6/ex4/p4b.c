@@ -31,10 +31,7 @@ int main(){
     for(int t = 1; t <= N; t++){
         pthread_join(threads[t], &threadret[t]);
         printf("I am from thread %ld and the parameter retruned from me is %d.\n", *(long *)threads[t], *(int*)threadret[t]);
-
-
     }
-    
 
     pthread_exit(0);
     //exit(0);
